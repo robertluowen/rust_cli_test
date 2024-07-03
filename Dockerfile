@@ -1,5 +1,3 @@
-~# NB: This is not a production-grade Dockerfile.
-
 #################
 ## build stage ##
 #################
