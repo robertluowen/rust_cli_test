@@ -2,7 +2,9 @@ name: Docker CI
   
 on:  
   push:  
-    branches: [ main ]  
+    branches: [ main ] 
+  pull_request:  
+    branches: [ main ] 
   
 jobs:  
   
@@ -12,7 +14,12 @@ jobs:
   
     steps:  
     - uses: actions/checkout@v2  
-      
+  
+    - name: Use Node.js 20.x  
+      uses: actions/setup-node@v3  # 推荐使用最新版本，当前为v3（请检查最新文档）  
+      with:  
+        node-version: 20.x    
+ 
     - name: Build the Docker image  
       run: docker build -t ci_test@v0.01 .  
   
