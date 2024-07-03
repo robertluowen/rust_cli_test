@@ -7,7 +7,7 @@ async fn index() -> impl Responder {
 
 #[get("/again")]
 async fn again() -> impl Responder {
-    HttpResponse::Ok().body("Hello world again!")
+    HttpResponse::Ok().body("Hello2 world again!")
 }
 
 #[actix_web::main]
